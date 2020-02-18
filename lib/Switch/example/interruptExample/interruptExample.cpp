@@ -1,5 +1,5 @@
 #include "Arduino.h"
-#include "Switch.h"
+#include "Switch.hpp"
 
 Switch light(D2);
 
