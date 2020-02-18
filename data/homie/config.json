@@ -1,0 +1,20 @@
+{
+    "name": "Desktop Lamp @ Living Room",
+    "device_id": "desktopLamp",
+    "device_stats_interval": 55,
+    "wifi": {
+      "ssid": "ROMER 2.4Ghz",
+      "password": "Ot9qiin400"
+    },
+    "mqtt": {
+      "host": "raspberrypi.local",
+      "port": 1883,
+      "auth": true,
+      "username": "openhab",
+      "password": "mos12#45quitto",
+      "ssl": false
+    },
+    "ota": {
+      "enabled": true
+    }
+  }
