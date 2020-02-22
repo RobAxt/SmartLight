@@ -43,8 +43,14 @@ LightNode::handleInput(const HomieRange& range, const String& property, const St
 
 bool 
 LightNode::lightOnHandler(const bool on) {
-    on ? _light.Relay::turnOn() : _light.Relay::turnOff();
-    setProperty("on").send(value);
-    Homie.getLogger() << "  ◦ Light is " << (on ? "on" : "off") << endl;
+    if(on) {
+        _light.Relay::turnOn();
+        setProperty("on").send("on");
+        Homie.getLogger() << F("  ◦ Light is on") << endl;
+    } else {
+        _light.Relay::turnOff();
+        setProperty("on").send("off");
+        Homie.getLogger() << F("  ◦ Light is off") << endl;
+    }
     return true;
 }
