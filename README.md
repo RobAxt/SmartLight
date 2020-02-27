@@ -1,2 +1,2 @@
 # SmartLight
-Smart Light based on Homie and wemos d1 mini with the relay shield
+Smart Light based on Homie and Wemos D1 Mini with the Relay Shield
