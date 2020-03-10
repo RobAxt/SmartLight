@@ -1,4 +1,6 @@
-# SmartLight
+# SmartLight :bulb:
+[![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)](http://doge.mit-license.org)
+
 Smart Light based on Homie-ESP8266 and Wemos D1 Mini with the Relay Shield
 
 **GPIO:**
