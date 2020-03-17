@@ -6,7 +6,7 @@
 #include "FunctionalInterrupt.h"
 
 #define DEBOUNCE_TIMEOUT 1000
-//#define D2 4	// ESP8266 ESP12F GPIO4
+// #define D2 4	// ESP8266 ESP12F GPIO4
 
 class Switch {
 	public:

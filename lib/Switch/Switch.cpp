@@ -36,7 +36,6 @@ void
 Switch::onChangeInterrupt(void) {	
 	if(millis()  > (unsigned long)(_debounceDelay + _lastDebounceTime)){
 		_state = digitalRead(_pin);
-		//Serial.println("Inside onChangeInterrupt");
 		onChangeAction();
 		_stateChanged = true;
 	}	
