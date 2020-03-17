@@ -17,5 +17,7 @@ class LightNode : public HomieNode {
    private:
         Light _light;
         bool lightOnHandler(const bool on);
+        typedef std::function<void(void)> ActionFunction;
+        void lightOnAction(ActionFunction action, const char* state);
 };
 #endif //lightNode_hpp

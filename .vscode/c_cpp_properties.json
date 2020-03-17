@@ -6,7 +6,6 @@
         {
             "name": "Win32",
             "includePath": [
-                "c:/Users/Rober/WorkSpace/Projects/SmartLight/include",
                 "c:/Users/Rober/WorkSpace/Projects/SmartLight/src",
                 "c:/Users/Rober/WorkSpace/Projects/SmartLight/lib/LightNode",
                 "c:/Users/Rober/WorkSpace/Projects/SmartLight/lib/Light",
@@ -60,7 +59,6 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "c:/Users/Rober/WorkSpace/Projects/SmartLight/include",
                     "c:/Users/Rober/WorkSpace/Projects/SmartLight/src",
                     "c:/Users/Rober/WorkSpace/Projects/SmartLight/lib/LightNode",
                     "c:/Users/Rober/WorkSpace/Projects/SmartLight/lib/Light",
@@ -113,7 +111,7 @@
                 ]
             },
             "defines": [
-                "PLATFORMIO=40200",
+                "PLATFORMIO=40201",
                 "ESP8266",
                 "ARDUINO_ARCH_ESP8266",
                 "ARDUINO_ESP8266_WEMOS_D1MINI",
