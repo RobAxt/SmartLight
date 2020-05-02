@@ -11,3 +11,10 @@ Smart Light based on Homie-ESP8266 and Wemos D1 Mini with the Relay Shield
 
 **Power:** 
 * Hi-Link P/N: HLK-5M05
+
+**Hardware Build V2** :construction:
+* [Photos](https://photos.app.goo.gl/Z1Gv3g5B6ht62BdJ8)
+
+**3D Design** :construction:
+* [TinkerCad](https://www.tinkercad.com/things/h2CH0p7LDbv-relaisbox)
+
