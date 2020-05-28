@@ -36,8 +36,12 @@ void
 Switch::onChangeInterrupt(void) {	
 	if(millis()  > (unsigned long)(_debounceDelay + _lastDebounceTime)){
 		_state = digitalRead(_pin);
-		onChangeAction();
-		_stateChanged = true;
+		_timerInterrupt.once_ms(200, [this](){
+			if(_state == digitalRead(_pin)){
+				onChangeAction();
+				_stateChanged = true;
+				}
+		    });
 	}	
 	_lastDebounceTime = millis();
 }

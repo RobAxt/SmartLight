@@ -1,6 +1,7 @@
 #ifndef Switch_h
 #define Switch_h
 
+#include <Ticker.h>
 #include "Arduino.h"
 #include "pins_arduino.h"	
 #include "FunctionalInterrupt.h"
@@ -23,6 +24,7 @@ class Switch {
 		int _debounceDelay;
 		bool _stateChanged;
 		void onChangeInterrupt(void);
+        Ticker _timerInterrupt;
 
 	protected:
 		virtual void onChangeAction(void);
