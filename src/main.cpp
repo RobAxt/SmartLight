@@ -1,8 +1,9 @@
 #include <Homie.h>
 #include <LightNode.hpp>
+#include "TelnetStream.h"
 
 #define FW_NAME "smart-light"
-#define FW_VERSION "1.1.2"
+#define FW_VERSION "1.1.3" 
 
 /* Magic sequence for Autodetectable Binary Upload */
 const char *__FLAGGED_FW_NAME = "\xbf\x84\xe4\x13\x54" FW_NAME "\x93\x44\x6b\xa7\x75";
@@ -16,6 +17,10 @@ void setup() {
   Serial.begin(SERIAL_SPEED);
   Serial << endl << endl;
   Serial << F("Build Date and Time: ") << __DATE__ << " & " << __TIME__ << endl;
+#if TELNET_LOG
+  TelnetStream.begin();
+  Homie.setLoggingPrinter(&TelnetStream);
+#endif
 #else
   Homie.disableLogging();
 #endif
