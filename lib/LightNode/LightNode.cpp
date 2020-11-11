@@ -23,7 +23,7 @@ LightNode::setup() {
 
 void
 LightNode::loop() {
-    if(_light.stateChanged()){
+    if(_light.localChange()){
         Homie.getLogger() << F("Local State Changed... ") << endl;
         Homie.getLogger() << F("  ◦ Switch State: ") << (_light.Switch::getState()? "on" : "off") << endl;
         Homie.getLogger() << F("  ◦ Relay State: ") << (_light.Relay::getState()? "on" : "off") << endl;

@@ -9,8 +9,7 @@ class Light : public Switch, public Relay {
 
 	public:
 		Light(int swt=D2, int rly=D1, bool NO=false);
-	protected:
-		virtual void onChangeAction(void) override;
+		bool localChange(void);
 };
 
 #endif

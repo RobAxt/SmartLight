@@ -1,12 +1,12 @@
 #include "Switch.hpp"
 
-Switch::Switch(int pin) : _pin(pin),_lastDebounceTime(0),_debounceDelay(DEBOUNCE_TIMEOUT) {
-	pinMode(_pin, INPUT_PULLUP);
-	attachInterrupt(_pin, std::bind(&Switch::onChangeInterrupt,this), CHANGE); 
+Switch::Switch(int pin) : _pin(pin) {
+	attach( _pin, INPUT_PULLUP ); 
+	interval(50); 
+	setPressedState(LOW); 
 }
 
 Switch::~Switch(void) {
-	detachInterrupt(_pin);
 }
 
 bool
@@ -21,27 +21,13 @@ Switch::getPin(void) {
 
 bool
 Switch::stateChanged(void) {
-	if(_stateChanged){
-		_stateChanged = false;
+	if(pressed()){
+		_state = LOW;
+		return true;
+	}
+	if(released()){
+		_state = HIGH;
 		return true;
 	}
 	return false;		
-}
-
-void 
-Switch::onChangeAction(void) {
-}
-
-void
-Switch::onChangeInterrupt(void) {	
-	if(millis()  > (unsigned long)(_debounceDelay + _lastDebounceTime)){
-		_state = digitalRead(_pin);
-		_timerInterrupt.once_ms(200, [this](){
-			if(_state == digitalRead(_pin)){
-				onChangeAction();
-				_stateChanged = true;
-				}
-		    });
-	}	
-	_lastDebounceTime = millis();
 }
