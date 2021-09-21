@@ -7,7 +7,7 @@
 
 // #define D2 4	// ESP8266 ESP12F GPIO4
 
-class Switch : public Button {
+class Switch : public Bounce2::Button {
 	public:
 		Switch(int pin=D2);
 		~Switch(void);
